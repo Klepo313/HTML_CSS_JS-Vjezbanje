@@ -5,8 +5,9 @@
     font-family: 'Montserrat';
 }
 body{
-    background-color: #8EC5FC;
-    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
 }
 h1{
     text-align: center;
@@ -16,5 +17,24 @@ h1{
     font-weight: 500;
 }
 #btn-dodaj-todo{
-    
+    background-color: #10be64;
+    color: #fff;
+    margin: auto;
+    margin-top: 40px;
+    width: 50%;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.icon-plus{
+    width: 12px;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 10px;
+    color: #fff;
+
 }
