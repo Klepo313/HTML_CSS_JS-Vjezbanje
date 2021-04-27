@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+:root{
+    font-size: 16px;
+    --text-primary: 16px;
+    --text-secondary: 'Open sans';
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+}
