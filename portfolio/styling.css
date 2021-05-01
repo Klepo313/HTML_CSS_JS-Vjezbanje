@@ -1,7 +1,10 @@
 :root{
-    --tamnoNarančasta: #010101;
+    --pozadina: #010101;
+    --tamnoNarančasta: #A36C2B;
     --bijela: #fff;
     --zlatna: #FED576;
+    --kontakt-tamnosiva: #2E2E2E;
+    --kontakt-input-kontakt: #161616;
 }
 *{
     margin: 0;
