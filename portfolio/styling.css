@@ -1,0 +1,13 @@
+:root{
+    --tamnoNarančasta: #010101;
+    --bijela: #fff;
+    --zlatna: #FED576;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: var(--tamnoNarančasta);
+}
