@@ -13,4 +13,17 @@
 }
 body {
     background: var(--pozadina);
+    color: var(--bijela);
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid red;
+    height: 120px;
+}
+navbar-container-left{
+    border: 1px solid blue;
+    width: 20px;
 }
