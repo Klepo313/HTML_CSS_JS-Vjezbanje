@@ -33,3 +33,7 @@ nav{
 h1{
     font-family: 'Righteous', cursive;
 }
+.rolling-ball{
+    width: auto;
+    height: auto;
+}
