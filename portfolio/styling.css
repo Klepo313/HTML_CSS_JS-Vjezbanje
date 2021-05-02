@@ -23,17 +23,56 @@ nav{
     justify-content: space-between;
     border: 1px solid red;
     height: 120px;
+    width: 100%;
+}
+.navbar-container-left{
+    margin-left: 58px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid blue;
+    height: 50%;
     width: auto;
 }
-.navbar-container-left, .navbar-container-right{
-    border: 1px solid blue;
-    height: 100%;
-    width: 100%;
+.navbar-container-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid purple;
+    margin-right: 170px;
+    height: 50%;
+    width: auto;
+}
+.navbar-container-right > img{
+    margin-left: 60px;
+}
+
+.homeIcon{
+    margin-right: 77px;
 }
 h1{
     font-family: 'Righteous', cursive;
 }
-.rolling-ball{
-    width: auto;
-    height: auto;
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+    opacity: 0.9;
+}
+li{
+    margin-right: 121px;
+    border-bottom: 1px solid black;
+    margin-top: auto;
+    padding-bottom: 5px;
+}
+li:hover{
+    border-bottom: 1px solid rgb(182, 182, 182);
+    cursor: pointer;
+}
+.kontakt{
+    margin-right: 0px;
 }
