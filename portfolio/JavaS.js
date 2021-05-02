@@ -1,4 +1,7 @@
 
-var 
+var btnPlay = document.getElementById("btnPlayVideo");
+function sirinaVisina(){
+    alert("Širina: " + window.screen.availWidth + "px\n" + "Visina: " + window.screen.availHeight + "px");
+}
 
-alert("Širina: " + window.screen.availWidth + "\n" + "Visina: " + window.screen.availHeight);
+btnPlay.addEventListener("click", sirinaVisina);

@@ -139,7 +139,9 @@ main{
     letter-spacing: 0.06em;
     opacity: 0.8;
 }
-
+.div-btn{
+    display: flex;
+}
 
 #btnPlayVideo{
     height: auto;
@@ -149,6 +151,10 @@ main{
     border-radius: 200px;
     border: none;
     text-align: center;
+}
+#btnPlayVideo:hover , #btnVidiVise:hover {
+    cursor: pointer;
+    opacity: 0.85;
 }
 #btnVidiVise{
     margin-left: 100px;
