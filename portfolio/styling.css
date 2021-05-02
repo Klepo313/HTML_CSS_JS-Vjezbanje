@@ -1,6 +1,6 @@
 :root{
     --pozadina: #010101;
-    --tamnoNarančasta: #A36C2B;
+    --narančasta: #C3863E;
     --bijela: #fff;
     --zlatna: #FED576;
     --kontakt-tamnosiva: #2E2E2E;
@@ -52,6 +52,24 @@ nav{
 }
 h1{
     font-family: 'Righteous', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 99px;
+    letter-spacing: 0.06em;
+    margin-bottom: 13px;
+}
+h3{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+    letter-spacing: 0.06em;
+    color: #FED576;
+    opacity: 0.4;
+    margin-bottom: 80px;
 }
 ul{
     display: flex;
@@ -75,4 +93,62 @@ li:hover{
 }
 .kontakt{
     margin-right: 0px;
+}
+main{
+    border: 1px solid yellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 85vh;
+}
+.main-container-left{
+    display: flex;
+    margin-left: 58px;
+    border: 1px solid green;
+    width: 50%;
+    height: 100%;
+}
+.main-container-right{
+    border: 1px solid rgb(128, 0, 81);
+    width: 50%;
+    height: 100%;
+    margin-right: 170px;
+    margin-left: 212px;
+}
+.slika-balun{
+    position: relative;
+    width: 762px;
+    height: 747px;
+    z-index: 1;
+    margin-top: auto;
+}
+.div-right-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.div-right-container > p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: medium;
+    font-size: 16px;
+    line-height: 170%;
+    text-align: justify;
+    letter-spacing: 0.06em;
+    opacity: 0.8;
+    width: 79%;
+    margin-bottom: 80px;
+}
+
+#btnPlayVideo{
+    height: auto;
+    width: auto;
+    padding: 28px 30px;
+    background: var(--narančasta);
+    border-radius: 200px;
+    border: none;
+    text-align: center;
 }
