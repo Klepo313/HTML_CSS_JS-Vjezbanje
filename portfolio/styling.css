@@ -1,5 +1,5 @@
 :root{
-    --pozadina: #010101;
+    --pozadina: #000000;
     --narančasta: #C3863E;
     --bijela: #fff;
     --zlatna: #FED576;
@@ -36,7 +36,7 @@ nav{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-right: 170px;
+    margin-right: 80px;
     height: 50%;
     width: auto;
 }
@@ -106,8 +106,14 @@ main{
     align-items: center;
     justify-content: center;
     margin-left: 58px;
-    width: 50%;
+    width: 100%;
     height: 100%;
+}
+.slika-balun{
+    margin: auto;
+    width: 762px;
+    height: 747px;
+    z-index: 1;
 }
 .main-container-right{
     width: 100%;
@@ -116,12 +122,6 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.slika-balun{
-    margin: auto;
-    width: 762px;
-    height: 747px;
-    z-index: 1;
 }
 .div-right-container{
     margin: auto;
@@ -174,3 +174,15 @@ main{
     border-radius: 0px;
     padding: 35px 140px;
 }
+
+/*1490*/
+
+/****************************************************************/
+/****************************************************************/
+/****************************************************************/
+/****************************************************************/
+
+@media screen and (max-width:1490px){
+    
+}
+
