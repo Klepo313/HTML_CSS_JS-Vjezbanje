@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 body {
     background: var(--pozadina);
@@ -28,4 +29,7 @@ nav{
     border: 1px solid blue;
     height: 100%;
     width: 100%;
+}
+h1{
+    font-family: 'Righteous', cursive;
 }
