@@ -6,9 +6,11 @@ let burgerMenu = document.getElementsByClassName("burger");
 let sidebar = document.getElementsByClassName("sidebar");
 
 function showSideMenu(){
-
+    sidebar[0].style.display = "flex";
 }
 function hideSideMenu(){
-    
+    sidebar[0].style.display = "none";
 }
+
+burgerMenu[0].addEventListener("click", showSideMenu, false);
 

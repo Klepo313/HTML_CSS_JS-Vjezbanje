@@ -188,7 +188,6 @@ main{
 
 .sidebar{
     position: absolute;
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     width: 237px;
