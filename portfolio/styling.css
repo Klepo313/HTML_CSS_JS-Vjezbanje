@@ -184,6 +184,13 @@ main{
     padding: 35px 140px;
 }
 
+/*SIDE BAR*/
+
+.sidebar{
+
+}
+
+
 /*1490*/
 
 /****************************************************************/
@@ -279,7 +286,7 @@ main{
         opacity: 0.7;
     }
     .burger:hover{
-        padding: 2px;
+        padding: 1px;
         fill: var(--narančasta);
         opacity: 1;
         cursor: pointer;
