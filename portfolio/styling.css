@@ -527,6 +527,6 @@ h2{
         margin: auto;
     }
     #btnVidiVise{
-        width: 100%;
+        display: none;
     }
 }
