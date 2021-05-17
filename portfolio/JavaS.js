@@ -14,6 +14,4 @@ function hideSideMenu(){
 
 burgerMenu[0].addEventListener("click", showSideMenu, false);
 
-function onHoverDarken(){
-    document.getElementsById("slikaOmeni").setAttribute("style","-webkit-filter: brightness(30%)")
-}
+
