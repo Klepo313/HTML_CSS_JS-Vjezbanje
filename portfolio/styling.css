@@ -7,10 +7,17 @@
     --kontakt-input-kontakt: #161616;
 }
 *{
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    /*
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;*/
 }
 body {
     background: var(--pozadina);
@@ -59,6 +66,12 @@ nav{
 .media:hover{
     cursor: pointer;
     opacity: 0.8;
+    
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 h1{
     font-family: 'Righteous', cursive;
@@ -98,6 +111,11 @@ li{
     padding-bottom: 5px;
 }
 li:hover{
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
     border-bottom: 1px solid rgb(182, 182, 182);
     cursor: pointer;
 }
@@ -178,6 +196,12 @@ main{
 #btnPlayVideo:hover , #btnVidiVise:hover {
     cursor: pointer;
     opacity: 0.85;
+    
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 #btnVidiVise{
     margin-left: 100px;
