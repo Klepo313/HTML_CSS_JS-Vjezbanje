@@ -77,6 +77,7 @@ nav{
 #back2Top{
     width: 16px;
     height: 16px;  
+    fill: #fff;
 }
 #scroll2TopBtn{
     display: none;
@@ -94,7 +95,20 @@ nav{
     height: auto;
 }
 #scroll2TopBtn:hover{
-    opacity: 0.8;
+    background-color: #9e6c33;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+#scroll2TopBtn:hover > h7{
+    display: inline-block;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 
 h1{
