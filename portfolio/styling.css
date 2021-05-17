@@ -73,6 +73,30 @@ nav{
     -ms-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
+
+#back2Top{
+    width: 16px;
+    height: 16px;  
+}
+#scroll2TopBtn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    padding: 15px;
+    border: none;
+    outline: none;
+    background-color: var(--narančasta);
+    cursor: pointer;
+    border-radius: 4px;
+    width: auto;
+    height: auto;
+}
+#scroll2TopBtn:hover{
+    opacity: 0.8;
+}
+
 h1{
     font-family: 'Righteous', cursive;
     font-style: normal;
