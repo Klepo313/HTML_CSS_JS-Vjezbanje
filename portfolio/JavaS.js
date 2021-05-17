@@ -14,3 +14,4 @@ function hideSideMenu(){
 
 burgerMenu[0].addEventListener("click", showSideMenu, false);
 
+jQuery
