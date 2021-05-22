@@ -122,7 +122,6 @@ h7{
 /*******************************MAIN 3*********************************/
 
 .main3{
-    border: 1px solid red;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -169,6 +168,7 @@ h7{
 
 
 .main4{
+    border: 1px solid red;
     width: 100%;
     height: 100vh;
     background-color: var(--kontakt-tamnosiva);
@@ -179,9 +179,11 @@ h7{
 }
 .centrirat{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;height: 100%;
+    width: 100%;
+    height: 70%;
 }
 .main4-container-kontakt{
     position: relative;
@@ -192,6 +194,7 @@ h7{
     width: 70%;
 }
 .kontakt-header1{
+    width: 100%;
     text-align: center;
     margin-bottom: 0.1em;
     margin-top: 3em;
@@ -251,6 +254,7 @@ textarea{
     padding: 10px;
     max-width: 28em;
     min-width: 28em;
+    height: 100%;
     background-color: var(--kontakt-input-kontakt);
     color: var(--zlatna);
     font-size: 17px;
@@ -280,6 +284,30 @@ input:focus::placeholder{
     left: 20px;
 }
 
+#posaljiBtn{
+    background: var(--narančasta);
+    color: var(--bijela);
+    border: none;
+    font-size: 18px;
+    letter-spacing: 3px;
+    border-radius: 0px;
+    padding: 35px 140px;
+}
+#posaljiBtn:hover{
+    cursor: pointer;
+    opacity: 0.85;
+    
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.centrirat:last-child{
+    flex-direction: column;
+    justify-content: space-around;
+}
 
 /**************************************************************/
 /**************************************************************/
@@ -299,6 +327,22 @@ input:focus::placeholder{
     .oMeni-text{
         font-size: 16px;
         margin-bottom: 80px;
+    }
+    .galSlika{
+        font-size: 60px;
+    }
+}
+@media screen and (max-width: 1225px){
+    .main4-container-kontakt{
+        display: flex;
+        flex-direction: column;
+    }
+    .centrirat{
+        height: 90%;
+    }
+    input{
+        max-width: 28em;
+        height: 3.8125em;
     }
 }
 @media screen and (max-width: 732px){
