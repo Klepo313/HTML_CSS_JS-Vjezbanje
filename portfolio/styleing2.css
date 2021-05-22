@@ -168,7 +168,6 @@ h7{
 
 
 .main4{
-    border: 1px solid red;
     width: 100%;
     height: 100vh;
     background-color: var(--kontakt-tamnosiva);
@@ -210,7 +209,7 @@ h7{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1.2em;
+    width: auto;
 }
 .obg{
     /*border: 1px solid red;*/
@@ -259,10 +258,12 @@ textarea{
     color: var(--zlatna);
     font-size: 17px;
     font-weight: bold;
-    border: none;
     letter-spacing: 200%;
 }
-input:hover{
+textarea:focus{
+    outline: none;
+}
+input:hover, textarea:hover{
     background-color: #242424;
 }
 input[type="text"], input[type="email"]{
@@ -284,6 +285,10 @@ input:focus::placeholder{
     left: 20px;
 }
 
+.kontakt-input-predmet, textarea{
+    border: 2px solid var(--narančasta);
+}
+
 #posaljiBtn{
     background: var(--narančasta);
     color: var(--bijela);
@@ -292,6 +297,7 @@ input:focus::placeholder{
     letter-spacing: 3px;
     border-radius: 0px;
     padding: 35px 140px;
+    text-align: center;
 }
 #posaljiBtn:hover{
     cursor: pointer;
@@ -324,6 +330,9 @@ input:focus::placeholder{
     .oMeni{
         font-size: 80px;
     }
+    .main2-container-right{
+        display: none;
+    }
     .oMeni-text{
         font-size: 16px;
         margin-bottom: 80px;
@@ -338,7 +347,7 @@ input:focus::placeholder{
         flex-direction: column;
     }
     .centrirat{
-        height: 90%;
+        height: 100%;
     }
     input{
         max-width: 28em;
@@ -361,6 +370,22 @@ input:focus::placeholder{
     .oMeni{
         font-size: 40px;
     }
+    .galSlika{
+        font-size: 40px;
+    }
+    textarea{
+        min-width: 300px;
+    }
+    input, textarea{
+        width: 300px;
+    }
+    #posaljiBtn{
+        padding: 35px 60px;
+    }
+    
+}
+@media screen and (max-width: 420px){
+
 }
 @media screen and (max-width: 330px){
     .oMeni{
