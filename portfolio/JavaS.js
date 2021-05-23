@@ -5,6 +5,10 @@ var s2t = document.getElementById("scroll2TopBtn");
 let burgerMenu = document.getElementsByClassName("burger");
 let sidebar = document.getElementsByClassName("sidebar");
 
+var fscreen = document.getElementsByClassName("fscreen");
+var ix = document.getElementById("ix");
+var poglSliku = document.getElementById("pogledajSliku");
+
 function showSideMenu(){
     sidebar[0].style.display = "flex";
 }
@@ -16,7 +20,8 @@ burgerMenu[0].addEventListener("click", showSideMenu, false);
 
 
 
-// When the user scrolls down 20px from the top of the document, show the button
+//Scroll 2 Top
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -27,8 +32,18 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
 function topPosition() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+//FS Slika
+
+function pogledajSliku(){
+    document.getElementById("fscreen").style.display = "flex";
+}
+
+ix.addEventListener("click", function(){
+  document.getElementById("fscreen").style.display = "none";
+});
