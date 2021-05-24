@@ -162,7 +162,6 @@ h7{
 /*******************************MAIN 3*********************************/
 
 .main3{
-    border: 1px solid red;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -178,11 +177,15 @@ h7{
     align-items: center;
 }
 .slider-prikaz-slika{
-    border: 1px solid red;
-    width: 1500px;
-    height: 800px;
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
 }
 .main3-container-slike{
+    width: 70%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -195,11 +198,15 @@ h7{
     color: #fff;
     fill: #fff;
     z-index: 99;
+    opacity: 0.6;
+}
+.strelice:hover{
+    opacity: 1;
+    cursor: pointer;
+    padding: 2px;
 }
 .livaStrelica{
-    transform: rotate(20deg);
-}
-.okoStrelica{
+    transform: rotate(180deg);
 }
 .btnPrikaziSlike{
     text-align: center;

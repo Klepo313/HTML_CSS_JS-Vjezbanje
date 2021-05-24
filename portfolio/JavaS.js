@@ -67,23 +67,17 @@ function unmakeSticky(){
 const prostorZaSlike = document.getElementById('slider-prikaz-slika');
 const slikeArr = new Array();
 
+
 slikeArr[0] = new Image();
-slikeArr[0].src = 'slike/_FB_IMG_1574523833599.png';
+slikeArr[0].src = `slike/_FB_IMG_1574523833599.png`;
 
 slikeArr[1] = new Image();
-slikeArr[1].src = 'slike/_FB_IMG_1575911926123.png';
+slikeArr[1].src = `slike/_FB_IMG_1575911926123.png`;
 
 slikeArr[2] = new Image();
-slikeArr[2].src = 'slike/_FB_IMG_1576796322601.png';
+slikeArr[2].src = `slike/_FB_IMG_1576796322601.png`;
 
 slikeArr[3] = new Image();
-slikeArr[3].src = 'slike/_FB_IMG_1576796345019.png';
+slikeArr[3].src = `slike/_FB_IMG_1576796345019.png`;
 
-btnPrikaziSlike.addEventListener('click', function(){
-
-  var brojac = 0;
-
-  prostorZaSlike.style.backgroundImage = 'url(${slikeArr[${brojac}]})'
-
-});
 
