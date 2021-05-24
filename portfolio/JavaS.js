@@ -8,6 +8,7 @@ let sidebar = document.getElementsByClassName("sidebar");
 var fscreen = document.getElementsByClassName("fscreen");
 var ix = document.getElementById("ix");
 var poglSliku = document.getElementById("pogledajSliku");
+var btnPrikaziSlike = document.getElementById("btnPrikaziSlike");
 
 function showSideMenu() {
     sidebar[0].style.display = "flex";
@@ -60,3 +61,25 @@ function makeSticky(){
 function unmakeSticky(){
   document.getElementsByTagName('body')[0].style = `overflow: visible;`;
 }
+
+//Prikaži slike
+
+btnPrikaziSlike.addEventListener('click', function(){
+
+  btnPrikaziSlike.style = `display: none`;
+
+});
+
+let slikeArr = new Array();
+
+slikeArr[0] = new Image();
+slikeArr[0].src = 'slike/_FB_IMG_1574523833599.png';
+
+slikeArr[1] = new Image();
+slikeArr[1].src = 'slike/_FB_IMG_1575911926123.png';
+
+slikeArr[2] = new Image();
+slikeArr[2].src = 'slike/_FB_IMG_1576796322601.png';
+
+slikeArr[3] = new Image();
+slikeArr[3].src = 'slike/_FB_IMG_1576796345019.png';
