@@ -236,7 +236,7 @@ h7{
     width: 100%;
     text-align: center;
     margin-bottom: 0.1em;
-    margin-top: 3em;
+    margin-top: 0em;
 }
 
 .main4-container-center{
@@ -338,6 +338,7 @@ input:focus::placeholder{
     border-radius: 0px;
     padding: 35px 140px;
     text-align: center;
+    margin-top: 50px;
 }
 #posaljiBtn:hover{
     cursor: pointer;
@@ -358,6 +359,11 @@ input:focus::placeholder{
 /**************************************************************/
 /**************************************************************/
 
+@media screen and (max-width: 1453px){
+    .main4{
+        height: 100%;
+    }
+}
 
 @media screen and (max-width: 1424px){
     .main2{
@@ -379,6 +385,10 @@ input:focus::placeholder{
     }
     .galSlika{
         font-size: 60px;
+    }
+    #posaljiBtn{
+        padding: 25px 120px;
+        font-size: 17px;
     }
 }
 @media screen and (max-width: 1225px){
