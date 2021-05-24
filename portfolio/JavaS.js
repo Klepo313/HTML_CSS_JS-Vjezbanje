@@ -51,6 +51,9 @@ ix.addEventListener("click", function(){
   document.getElementById("fscreen").style.display = "none";
 });
 
+
+//Sidemanu da se ne može scrollat gore dole
+
 function makeSticky(){
   document.getElementsByTagName('body')[0].style = `overflow: hidden;`;
 }
