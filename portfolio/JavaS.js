@@ -65,15 +65,7 @@ function unmakeSticky(){
 //Prikaži slike
 
 const prostorZaSlike = document.getElementById('slider-prikaz-slika');
-
-btnPrikaziSlike.addEventListener('click', function(){
-
-  btnPrikaziSlike.style = `display: none`;
-  prostorZaSlike.style = `display: flex`;
-
-});
-
-let slikeArr = new Array();
+const slikeArr = new Array();
 
 slikeArr[0] = new Image();
 slikeArr[0].src = 'slike/_FB_IMG_1574523833599.png';
@@ -86,3 +78,12 @@ slikeArr[2].src = 'slike/_FB_IMG_1576796322601.png';
 
 slikeArr[3] = new Image();
 slikeArr[3].src = 'slike/_FB_IMG_1576796345019.png';
+
+btnPrikaziSlike.addEventListener('click', function(){
+
+  var brojac = 0;
+
+  prostorZaSlike.style.backgroundImage = 'url(${slikeArr[${brojac}]})'
+
+});
+

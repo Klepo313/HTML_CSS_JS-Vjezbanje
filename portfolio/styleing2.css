@@ -162,6 +162,7 @@ h7{
 /*******************************MAIN 3*********************************/
 
 .main3{
+    border: 1px solid red;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -177,9 +178,13 @@ h7{
     align-items: center;
 }
 .slider-prikaz-slika{
-    display: none;
-    width: auto;
-    height:auto;
+    border: 1px solid red;
+    width: 1500px;
+    height: 800px;
+}
+.main3-container-slike{
+    display: flex;
+    flex-direction:
 }
 .btnPrikaziSlike{
     text-align: center;
