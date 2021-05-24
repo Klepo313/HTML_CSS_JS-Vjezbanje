@@ -265,7 +265,6 @@ main{
     right: 0;
     margin-right: auto;
     z-index: 10;
-    overflow-y: hidden;
     background-color: #2E2E2E;
     display: none;
     overflow: hidden;
