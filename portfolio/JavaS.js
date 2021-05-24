@@ -64,9 +64,12 @@ function unmakeSticky(){
 
 //Prikaži slike
 
+const prostorZaSlike = document.getElementById('slider-prikaz-slika');
+
 btnPrikaziSlike.addEventListener('click', function(){
 
   btnPrikaziSlike.style = `display: none`;
+  prostorZaSlike.style = `display: flex`;
 
 });
 

@@ -21,7 +21,7 @@ h7{
 /*NEBITNE STVARI*/
 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
   }
 
   ::-webkit-scrollbar-track {
@@ -173,8 +173,13 @@ h7{
     height: 20vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+}
+.slider-prikaz-slika{
+    display: none;
+    width: auto;
+    height:auto;
 }
 .btnPrikaziSlike{
     text-align: center;
