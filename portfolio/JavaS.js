@@ -64,9 +64,11 @@ function unmakeSticky(){
 
 //Prikaži slike
 
-const prostorZaSlike = document.getElementById('slider-prikaz-slika');
-const slikeArr = new Array();
+const desnaStrelica = document.getElementById('desnaStrelica');
+const lijevaStrelica = document.getElementById('lijevaStrelica');
+let brojac = 0;
 
+const slikeArr = new Array();
 
 slikeArr[0] = new Image();
 slikeArr[0].src = `slike/_FB_IMG_1574523833599.png`;
@@ -79,5 +81,12 @@ slikeArr[2].src = `slike/_FB_IMG_1576796322601.png`;
 
 slikeArr[3] = new Image();
 slikeArr[3].src = `slike/_FB_IMG_1576796345019.png`;
+
+//DESNA STRELICA
+desnaStrelica.addEventListener('click', function(){
+
+  
+
+});
 
 
