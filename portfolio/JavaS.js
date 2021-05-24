@@ -64,28 +64,35 @@ function unmakeSticky(){
 
 //Prikaži slike
 
-const desnaStrelica = document.getElementById('desnaStrelica');
-const lijevaStrelica = document.getElementById('lijevaStrelica');
+const arrRight = document.getElementById('desnaStrelica');
+const arrLeft = document.getElementById('lijevaStrelica');
+const galerija = document.getElementsByClassName('galerijaSlike');
 let brojac = 0;
 
 const slikeArr = new Array();
 
-slikeArr[0] = new Image();
-slikeArr[0].src = `slike/_FB_IMG_1574523833599.png`;
+const slikeSlidera = [
+  {
+    src: `slike/_FB_IMG_1574523833599.png`
+  },
+  {
+    src: `slike/_FB_IMG_1575911926123.png`
+  },
+  {
+    src: `slike/_FB_IMG_1576796322601.png`
+  },
+  {
+    src: `slike/_FB_IMG_1576796345019.png`
+  }
+];
 
-slikeArr[1] = new Image();
-slikeArr[1].src = `slike/_FB_IMG_1575911926123.png`;
-
-slikeArr[2] = new Image();
-slikeArr[2].src = `slike/_FB_IMG_1576796322601.png`;
-
-slikeArr[3] = new Image();
-slikeArr[3].src = `slike/_FB_IMG_1576796345019.png`;
 
 //DESNA STRELICA
-desnaStrelica.addEventListener('click', function(){
+arrRight.addEventListener('click', function(){
 
-  
+  if(brojac === slikeSlidera.length - 1){
+    galerija.src = ""
+  }
 
 });
 
