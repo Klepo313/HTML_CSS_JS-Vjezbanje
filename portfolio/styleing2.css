@@ -295,9 +295,9 @@ textarea{
     min-width: 28em;
     height: 100%;
     background-color: var(--kontakt-input-kontakt);
-    color: var(--zlatna);
+    color: var(--bijela);
     font-size: 17px;
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 200%;
 }
 textarea:focus{
