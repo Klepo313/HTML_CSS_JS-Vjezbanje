@@ -184,7 +184,8 @@ h7{
 }
 .main3-container-slike{
     display: flex;
-    flex-direction:
+    flex-direction: row;
+    align-items: center;
 }
 .btnPrikaziSlike{
     text-align: center;
