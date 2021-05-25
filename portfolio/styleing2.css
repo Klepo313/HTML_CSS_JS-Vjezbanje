@@ -184,18 +184,26 @@ h7{
     width: auto;
     height: auto;
 }
+.main3-container-down{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 .main3-container-slike{
-    width: 70%;
+    border: 1px solid red;
+    width: 90%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding-bottom: 250px;
 }
 .strelice{
     position: relative;
     width: 44px;
     height: 44px;
+    max-width: 44px;
+    max-height: 44px;
     color: #fff;
     fill: #fff;
     z-index: 99;
@@ -234,6 +242,7 @@ h7{
 }
 .galerijaSlike{
     width: 100%;
+    height: auto;
 }
 
 .main4{
@@ -392,6 +401,15 @@ input:focus::placeholder{
     .main4{
         height: 100%;
     }
+    .oMeni-slika:hover{
+        cursor: auto;
+        -webkit-filter: brightness(100%);
+    }
+    .klick{
+        display: none;
+    }
+    
+    
 }
 
 @media screen and (max-width: 1424px){
@@ -415,6 +433,10 @@ input:focus::placeholder{
     #posaljiBtn{
         padding: 25px 120px;
         font-size: 17px;
+    }
+    .strelice{
+        width: 24px;
+        height: 24px;
     }
 }
 @media screen and (max-width: 1225px){

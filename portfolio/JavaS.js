@@ -70,9 +70,9 @@ const galerija = document.getElementsByClassName('galerijaSlike');
 
 var brojac = 0;
 var vrijeme = 3000;
-const slikeArr = new Array();
+const slikeArr = [];
 slikeArr[0] = 'slike/_FB_IMG_1574523833599.png';
-slikeArr[1] = `slike/_FB_IMG_1575911926123.png`;
+slikeArr[1] = `slike/_FB_IMG_1575911926123-1.png`;
 slikeArr[2] = `slike/_FB_IMG_1576796322601.png`;
 slikeArr[3] = `slike/_FB_IMG_1576796345019.png`;
 
@@ -81,7 +81,7 @@ function imageSlider(){
 
   document.sliderSlike.src = slikeArr[brojac];
 
-  if(brojac < slikeArr.lenght - 1){
+  if(brojac < slikeArr.length - 1){
     brojac++;
   } else {
     brojac = 0;
@@ -91,6 +91,8 @@ function imageSlider(){
 }
 
 window.onload = imageSlider;
+
+
 
 
 
