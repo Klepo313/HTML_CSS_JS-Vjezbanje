@@ -245,6 +245,28 @@ h7{
     height: auto;
 
 }
+#atmSlike{
+    text-align: center;
+    width: auto;
+    padding: 20px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 1);
+    color: var(--bijela);
+    font-size: 1em;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+#atmSlike:hover{
+    cursor: pointer;
+    background-color: var(--bijela);
+    color: var(--kontakt-input-kontakt);
+
+    -webkit-transition: all 0.4s ease;
+    -moz-transition:    all 0.4s ease;
+    -o-transition:      all 0.4s ease;
+    -ms-transition:     all 0.4s ease;
+    transition:         all 0.4s ease;
+}
 .okoStrelica{
     height: 30%;
     display: flex;

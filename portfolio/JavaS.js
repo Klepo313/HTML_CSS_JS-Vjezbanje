@@ -67,35 +67,54 @@ function unmakeSticky(){
 const arrRight = document.getElementById('desnaStrelica');
 const arrLeft = document.getElementById('lijevaStrelica');
 const galerija = document.getElementsByClassName('galerijaSlike');
+var btnAtmSlideshow = document.getElementById('atmSlike');
 
 var brojac = 0;
-var vrijeme = 1000;
+var vrijeme = 2000;
+var jeNije = 1;
 const slikeArr = [];
 slikeArr[0] = 'slike/_FB_IMG_1574523833599.png';
 slikeArr[1] = 'slike/_FB_IMG_1575911926123-1.png';
 slikeArr[2] = 'slike/_FB_IMG_1576796322601.png';
 slikeArr[3] = 'slike/_FB_IMG_1576796345019.png';
 
-//PROMJENA SLIKE U NEKOM VREMENSKOM INTERVALU
+//AUTOMATSKA PROMJENA SLIKE U NEKOM VREMENSKOM INTERVALU
+
 function imageSlider(){
 
   document.sliderSlike.src = slikeArr[brojac];
+  btnAtmSlideshow.innerHTML = "Zaustavi slideshow";
 
-  if(brojac < slikeArr.length - 1){
-    brojac++;
-  } else {
-    brojac = 0;
+  arrRight.style = "display: none";
+  arrLeft.style = "display: none";
+
+  if(jeNije === 0){
+    btnAtmSlideshow.innerHTML = "automatski slideshow";
+  } else{
+      if(brojac < slikeArr.length - 1){
+        brojac++;
+      } else {
+        brojac = 0;
+      }
+      setTimeout("imageSlider()", vrijeme);
   }
+  
+  btnAtmSlideshow.addEventListener("click", function(){
+    jeNije = 0;
 
-  setTimeout("imageSlider()", vrijeme);
+    arrRight.style = "display: none";
+    arrLeft.style = "display: none";
+  });
+
+
 }
 
-window.onload = imageSlider --;
 
 
 var index = brojac;
 
 //DESNA STRELICA
+
 arrRight.addEventListener('click', function(){
 
   if(index < slikeArr.length - 1){
@@ -116,7 +135,6 @@ arrRight.addEventListener('click', function(){
       sliderSlike.classList.remove('fadeIn');
     }, 1000);
   }
-  console.log(index);
 
 });
 
@@ -125,8 +143,8 @@ arrRight.addEventListener('click', function(){
 
 arrLeft.addEventListener('click', function(){
 
-  if(index < slikeArr.length - 1){
-    index--;
+  if(index === 0){
+    index = 3;
     document.sliderSlike.src = slikeArr[index];
 
       sliderSlike.classList.add('fadeIn');
@@ -134,9 +152,8 @@ arrLeft.addEventListener('click', function(){
       sliderSlike.classList.remove('fadeIn');
     }, 1000);
 
-  } 
-  else if(index == 0){
-    index++;
+  } else{
+    index--;
     document.sliderSlike.src = slikeArr[index];
 
       sliderSlike.classList.add('fadeIn');
@@ -147,20 +164,3 @@ arrLeft.addEventListener('click', function(){
   
 
 });
-
-/*
-const slikeSlidera = [
-  {
-    src: `slike/_FB_IMG_1574523833599.png`
-  },
-  {
-    src: `slike/_FB_IMG_1575911926123.png`
-  },
-  {
-    src: `slike/_FB_IMG_1576796322601.png`
-  },
-  {
-    src: `slike/_FB_IMG_1576796345019.png`
-  }
-];
-*/
