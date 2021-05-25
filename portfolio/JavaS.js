@@ -76,7 +76,7 @@ slikeArr[1] = `slike/_FB_IMG_1575911926123-1.png`;
 slikeArr[2] = `slike/_FB_IMG_1576796322601.png`;
 slikeArr[3] = `slike/_FB_IMG_1576796345019.png`;
 
-//PROMJENA SLIKE
+//PROMJENA SLIKE U NEKOM VREMENSKOM INTERVALU
 function imageSlider(){
 
   document.sliderSlike.src = slikeArr[brojac];
