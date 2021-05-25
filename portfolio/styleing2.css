@@ -191,12 +191,12 @@ h7{
     align-items: center;
 }
 .main3-container-slike{
-    border: 1px solid red;
     width: 90%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    height: 700px;
 }
 .strelice{
     position: relative;
@@ -241,10 +241,15 @@ h7{
     transition: all 0.5s ease;
 }
 .galerijaSlike{
-    width: 100%;
+    width: 90%;
     height: auto;
-}
 
+}
+.okoStrelica{
+    height: 30%;
+    display: flex;
+    align-items: center;
+}
 .main4{
     width: 100%;
     height: 100vh;
@@ -394,6 +399,18 @@ input:focus::placeholder{
     justify-content: space-around;
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.fadeIn{
+    animation: fadeIn 1s;
+}
+
 /**************************************************************/
 /**************************************************************/
 
@@ -434,10 +451,7 @@ input:focus::placeholder{
         padding: 25px 120px;
         font-size: 17px;
     }
-    .strelice{
-        width: 24px;
-        height: 24px;
-    }
+    
 }
 @media screen and (max-width: 1225px){
     .main4-container-kontakt{
@@ -466,6 +480,10 @@ input:focus::placeholder{
     }
     .main2-container-right{
         display: none;
+    }
+    .strelice{
+        width: 24px;
+        height: 24px;
     }
 }
 @media screen and (max-width: 600px){

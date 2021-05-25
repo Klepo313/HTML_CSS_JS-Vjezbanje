@@ -69,7 +69,7 @@ const arrLeft = document.getElementById('lijevaStrelica');
 const galerija = document.getElementsByClassName('galerijaSlike');
 
 var brojac = 0;
-var vrijeme = 3000;
+var vrijeme = 1000;
 const slikeArr = [];
 slikeArr[0] = 'slike/_FB_IMG_1574523833599.png';
 slikeArr[1] = `slike/_FB_IMG_1575911926123-1.png`;
@@ -90,15 +90,32 @@ function imageSlider(){
   setTimeout("imageSlider()", vrijeme);
 }
 
-window.onload = imageSlider;
+window.onload = imageSlider --;
 
 
-
-
+var index = brojac;
 
 //DESNA STRELICA
 arrRight.addEventListener('click', function(){
 
+  if(index <= slikeArr.length){
+    index++;
+    document.sliderSlike.src = slikeArr[index];
+
+      sliderSlike.classList.add('fadeIn');
+    setTimeout(() => {
+      sliderSlike.classList.remove('fadeIn');
+    }, 1000);
+
+  } else {
+    index = 0;
+    document.sliderSlike.src = slikeArr[index];
+
+      sliderSlike.classList.add('fadeIn');
+    setTimeout(() => {
+      sliderSlike.classList.remove('fadeIn');
+    }, 1000);
+  }
   
 
 });
