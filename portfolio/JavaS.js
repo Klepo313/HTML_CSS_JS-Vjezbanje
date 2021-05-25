@@ -72,9 +72,9 @@ var brojac = 0;
 var vrijeme = 1000;
 const slikeArr = [];
 slikeArr[0] = 'slike/_FB_IMG_1574523833599.png';
-slikeArr[1] = `slike/_FB_IMG_1575911926123-1.png`;
-slikeArr[2] = `slike/_FB_IMG_1576796322601.png`;
-slikeArr[3] = `slike/_FB_IMG_1576796345019.png`;
+slikeArr[1] = 'slike/_FB_IMG_1575911926123-1.png';
+slikeArr[2] = 'slike/_FB_IMG_1576796322601.png';
+slikeArr[3] = 'slike/_FB_IMG_1576796345019.png';
 
 //PROMJENA SLIKE U NEKOM VREMENSKOM INTERVALU
 function imageSlider(){
@@ -98,7 +98,7 @@ var index = brojac;
 //DESNA STRELICA
 arrRight.addEventListener('click', function(){
 
-  if(index <= slikeArr.length){
+  if(index < slikeArr.length - 1){
     index++;
     document.sliderSlike.src = slikeArr[index];
 
@@ -116,10 +116,37 @@ arrRight.addEventListener('click', function(){
       sliderSlike.classList.remove('fadeIn');
     }, 1000);
   }
-  
+  console.log(index);
 
 });
 
+
+//LIJEVA STRELICA
+
+arrLeft.addEventListener('click', function(){
+
+  if(index < slikeArr.length - 1){
+    index--;
+    document.sliderSlike.src = slikeArr[index];
+
+      sliderSlike.classList.add('fadeIn');
+    setTimeout(() => {
+      sliderSlike.classList.remove('fadeIn');
+    }, 1000);
+
+  } 
+  else if(index == 0){
+    index++;
+    document.sliderSlike.src = slikeArr[index];
+
+      sliderSlike.classList.add('fadeIn');
+    setTimeout(() => {
+      sliderSlike.classList.remove('fadeIn');
+    }, 1000);
+  }
+  
+
+});
 
 /*
 const slikeSlidera = [
