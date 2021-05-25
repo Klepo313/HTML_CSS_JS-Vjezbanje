@@ -82,29 +82,37 @@ slikeArr[3] = 'slike/_FB_IMG_1576796345019.png';
 
 function imageSlider(){
 
-  document.sliderSlike.src = slikeArr[brojac];
-  btnAtmSlideshow.innerHTML = "Zaustavi slideshow";
-
-  arrRight.style = "display: none";
-  arrLeft.style = "display: none";
-
   if(jeNije === 0){
     btnAtmSlideshow.innerHTML = "automatski slideshow";
+
+    btnAtmSlideshow.addEventListener("click", function(){
+      jeNije = 1;
+      arrRight.style = "display: none";
+      arrLeft.style = "display: none";
+    });
+
   } else{
+      document.sliderSlike.src = slikeArr[brojac];
+      btnAtmSlideshow.innerHTML = "Zaustavi slideshow";
+    
+      arrRight.style = "display: none";
+      arrLeft.style = "display: none";
+  
       if(brojac < slikeArr.length - 1){
         brojac++;
       } else {
         brojac = 0;
       }
       setTimeout("imageSlider()", vrijeme);
+
+      btnAtmSlideshow.addEventListener("click", function(){
+        jeNije = 0;
+        arrRight.style = "display: flex";
+        arrLeft.style = "display: flex";
+      });
   }
   
-  btnAtmSlideshow.addEventListener("click", function(){
-    jeNije = 0;
-
-    arrRight.style = "display: none";
-    arrLeft.style = "display: none";
-  });
+  
 
 
 }
