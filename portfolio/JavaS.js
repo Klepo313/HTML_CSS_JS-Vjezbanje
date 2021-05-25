@@ -67,10 +67,42 @@ function unmakeSticky(){
 const arrRight = document.getElementById('desnaStrelica');
 const arrLeft = document.getElementById('lijevaStrelica');
 const galerija = document.getElementsByClassName('galerijaSlike');
-let brojac = 0;
 
+var brojac = 0;
+var vrijeme = 3000;
 const slikeArr = new Array();
+slikeArr[0] = 'slike/_FB_IMG_1574523833599.png';
+slikeArr[1] = `slike/_FB_IMG_1575911926123.png`;
+slikeArr[2] = `slike/_FB_IMG_1576796322601.png`;
+slikeArr[3] = `slike/_FB_IMG_1576796345019.png`;
 
+//PROMJENA SLIKE
+function imageSlider(){
+
+  document.sliderSlike.src = slikeArr[brojac];
+
+  if(brojac < slikeArr.lenght - 1){
+    brojac++;
+  } else {
+    brojac = 0;
+  }
+
+  setTimeout("imageSlider()", vrijeme);
+}
+
+window.onload = imageSlider;
+
+
+
+//DESNA STRELICA
+arrRight.addEventListener('click', function(){
+
+  
+
+});
+
+
+/*
 const slikeSlidera = [
   {
     src: `slike/_FB_IMG_1574523833599.png`
@@ -85,15 +117,4 @@ const slikeSlidera = [
     src: `slike/_FB_IMG_1576796345019.png`
   }
 ];
-
-
-//DESNA STRELICA
-arrRight.addEventListener('click', function(){
-
-  if(brojac === slikeSlidera.length - 1){
-    galerija.src = ""
-  }
-
-});
-
-
+*/

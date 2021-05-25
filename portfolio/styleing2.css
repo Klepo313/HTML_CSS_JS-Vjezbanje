@@ -190,6 +190,7 @@ h7{
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    padding-bottom: 250px;
 }
 .strelice{
     position: relative;
@@ -231,7 +232,9 @@ h7{
     -ms-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
-
+.galerijaSlike{
+    width: 100%;
+}
 
 .main4{
     width: 100%;
@@ -402,9 +405,6 @@ input:focus::placeholder{
     .oMeni{
         font-size: 80px;
     }
-    .main2-container-right{
-        display: none;
-    }
     .oMeni-text{
         font-size: 16px;
         margin-bottom: 80px;
@@ -429,6 +429,7 @@ input:focus::placeholder{
         max-width: 28em;
         height: 3.8125em;
     }
+    
 }
 @media screen and (max-width: 732px){
     .oMeni{
@@ -440,6 +441,9 @@ input:focus::placeholder{
         font-size: 16px;
         margin-top: 20px;
         margin-bottom: 80px;
+    }
+    .main2-container-right{
+        display: none;
     }
 }
 @media screen and (max-width: 600px){
