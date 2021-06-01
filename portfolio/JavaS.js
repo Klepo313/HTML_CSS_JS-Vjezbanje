@@ -180,10 +180,9 @@ var inputPredmetPoruke = document.getElementById('inpPredmet');
 var textareaPoruka = document.getElementById('textareaPoruka');
 
 function CheckForm() {
-  if(inputIme == null){
+  if(inputIme == null)
     inputIme.style = "border: 2px solid red";
-    alert("")
-  }
+  alert("Unesi podatke u polja označena crvenom bojom!");
 }
 
 
