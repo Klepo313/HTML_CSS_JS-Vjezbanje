@@ -112,9 +112,6 @@ function imageSlider(){
       });
   }
   
-  
-
-
 }
 
 
@@ -172,3 +169,20 @@ arrLeft.addEventListener('click', function(){
   
 
 });
+
+
+//FORMA - CHECK
+
+var inputIme = document.getElementById('inpIme');
+var inputPrezime = document.getElementById('inpPrezime');
+var inputIEmail = document.getElementById('inpEmail');
+var inputPredmetPoruke = document.getElementById('inpPredmet');
+var textareaPoruka = document.getElementById('textareaPoruka');
+
+function CheckForm() {
+  if(inputIme == null){
+    inputIme.style = "border: 2px solid red";
+    alert("")
+  }
+}
+

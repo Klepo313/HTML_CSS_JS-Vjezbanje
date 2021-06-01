@@ -416,6 +416,24 @@ input:focus::placeholder{
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
+#snackbar{
+    margin: auto;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    min-width: 300px;
+    width: 800px;
+    max-height: 100px;
+    min-height: 100px;
+    background-color: #FF0000;
+
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    bottom: 20px;
+}
 
 .centrirat:last-child{
     flex-direction: column;

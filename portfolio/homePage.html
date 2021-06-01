@@ -158,7 +158,7 @@
     <!---------------------------------------------------------------->
         <!--KONTAKT-->
 
-    <form>
+    <form name="FORM">
         <div class="main4">
             <div class="kontakt-header1">
                 <h9>Kontakt</h9>
@@ -171,11 +171,11 @@
                         <div class="ime-prezime-input">
                             <div class="obg">
                                 <h6>Ime</h3>
-                                <input class="kontakt-input-ime" placeholder="" type="text">
+                                <input class="kontakt-input-ime" id="inpIme" placeholder="" type="text">
                                 <h6>Prezime</h6>
-                                <input class="kontakt-input-prezime" placeholder="" type="text">
+                                <input class="kontakt-input-prezime" id="inpPrezime" placeholder="" type="text">
                                 <h6>Email</h6>
-                                <input class="kontakt-input-email" placeholder="" type="email">
+                                <input class="kontakt-input-email" id="inpEmail" placeholder="" type="email">
                             </div>
                         </div>
                     </div>
@@ -184,9 +184,9 @@
                         <div class="ime-prezime-input">
                             <div class="obg">
                                 <h6>Predmet poruke</h3>
-                                <input class="kontakt-input-predmet" placeholder="" type="text">
+                                <input class="kontakt-input-predmet" id="inpPredmet" placeholder="" type="text">
                                 <h6>Poruka</h6>
-                                <textarea id="w3review" name="w3review" rows="10" cols="50"></textarea>
+                                <textarea id="w3review" name="w3review" id="textareaPoruka" rows="10" cols="50"></textarea>
                             </div>
                         </div>
                     </div>
@@ -203,6 +203,10 @@
     </form>
     <!---------------------------------------------------------------->
 
+    <div style="width: 100%; height:auto; display:flex; justify-content:center;">
+        <div class="zatvoriSnack"><img src="slike/close.svg"></div>
+        <div id="snackbar">Unesi potrebne podatke</div>
+    </div>
 
     <script src="JavaS.js"></script>
 </body>
