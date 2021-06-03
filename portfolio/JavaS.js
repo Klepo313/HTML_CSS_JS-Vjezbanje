@@ -180,20 +180,20 @@ var inputPredmetPoruke = document.getElementById('inpPredmet');
 var textareaPoruka = document.getElementById('textareaPoruka');
 
 function CheckForm() {
-  if(inputIme == null)
-    inputIme.style = "border: 2px solid red";
+  if(inputIme == "")
+    inputIme.style.border = "2px solid red";
 
-  else if(inputPrezime == null)
-    inputPrezime.style = "border: 2px solid red";
+  if(inputPrezime == null)
+    inputPrezime.style.border = "2px solid red";
 
-  else if(inputEmail == null)
-    inputEmail.style = "border: 2px solid red";
+  if(inputEmail == null)
+    inputEmail.style.border = "2px solid red";
 
-  else if(inputPredmetPoruke == null)
-    inputPredmetPoruke.style = "border: 2px solid red";
+  if(inputPredmetPoruke == null)
+    inputPredmetPoruke.style.border = "2px solid red";
 
-  else if(textareaPoruka == null)
-    textareaPoruka.style = "border: 2px solid red";
+  if(textareaPoruka == null)
+    textareaPoruka.style.border = "2px solid red";
 
     //ALERT
   alert("Unesi podatke u polja označena crvenom bojom!");
