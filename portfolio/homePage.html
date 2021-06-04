@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Righteous&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="transition.circles.min.css" />
     <title>Portfolio</title>
     <link rel="icon" href="slike/favicon-16x16.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="styling.css">
@@ -30,7 +31,7 @@
             <div class="navbar-container-right">
                 <img class="media" src="slike/Group 2.png" alt="FB"style="margin-left: 0;">
                 <img class="media" src="slike/Layer 2.png" alt="IG">
-                <svg class="burger" height="32pt" viewBox="0 -53 384 384" width="32pt" xmlns="http://www.w3.org/2000/svg"><path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/></svg>
+                <svg class="burger" onclick="makeSticky();" height="32pt" viewBox="0 -53 384 384" width="32pt" xmlns="http://www.w3.org/2000/svg"><path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/></svg>
             </div>
         </nav>
     </header>
@@ -44,7 +45,7 @@
     <div class="sidebar">
 
         <div class="zaglavlje">
-            <img onclick="hideSideMenu()" id="arr-right" src="slike/arr-right.svg" alt="Close">
+            <img onclick="hideSideMenu(), unmakeSticky()" id="arr-right" src="slike/arr-right.svg" alt="Close">
             <h2>Menu</h2>
             <ul class="menu-ul">
                 <li class="menu-li">O meni</li>
@@ -78,7 +79,7 @@
                 </div>
                 <div class="div-btn">
                     <button id="btnPlayVideo"><img src="slike/playBtn.svg" ></button>
-                    <a href="#main2"><button id="btnVidiVise">Vidi više</button></a>
+                    <a href="#oMeni"><button id="btnVidiVise">Vidi više</button></a>
                 </div>
             </div>
         </div>  
@@ -87,27 +88,38 @@
     <!---------------------------------------------------------------->
     <!--O MENI-->
 
+    <div class="fullscreenImage" id="fscreen">
+        <div style="width:auto; height:auto;">
+            <img class="fslika" src="slike/_FB_IMG_1575911926123-1.png" alt="slikaRepk"> 
+            <div class="ix" id="ix" onclick="zatvoriFS()">
+                <p class="close">CLOSE</p>
+            </div>
+        </div>
+    </div>
+
         <div class="main2" id="main2">
 
             <div class="main2-container-left">
-                <h1 class="oMeni">O meni</h1>
+                <h1 class="oMeni" id="oMeni">O meni</h1>
                 <p class="oMeni-text">Ja sam Antonio Klepo, sedamnaestogodišnji košarkaš iz Kaštela koji trenira košarku već 8 godina. Igram u 4 različite lige, dvije mlađih kategorija (Kadeti i Juniori) i dvije starijih (Prva i Druga Hrvatska razvojna liga)
                     <br class="brabra">
                     Počeo sam se baviti košarkom još u trećem razredu osnovne škole kada sam prestao trenirati nogomet. 
                     </br>
                     Prvo veće natjecanje na kojem sam sudjelovao sa KK Splitom u Zagrebu 2015. godine je Državno košarkaško prvenstvo za djecu rođene 2003. i mlađe gdje smo završili na 4. mjestu. 
-                    <br class="brabra">
+                    <!--<br class="brabra">
                     Također, sudjelovao sam na više reprezentativnih okupljanja diljem Dalmacije, te sam početkom 2020. godine službeno i nastupao za Hrvatsku reprezentaciju za igrače rođene 2004. i mlađe. 
-                    </br>
+                    </br>-->
                 </p>
             </div>
 
             <div class="main2-container-right">
                 <img class="oMeni-slika" id="slikaOmeni" src="slike/_FB_IMG_1575911926123-1.png" alt="slikaRepk">     
-                <h6 class="klick">Pogledaj sliku</h6>     
+                <h6 class="klick" id="pogledajSliku" onclick="pogledajSliku()">Pogledaj sliku</h6>     
             </div>
 
         </div>
+
+        
 
     <!---------------------------------------------------------------->
 
@@ -118,23 +130,38 @@
 
             <div class="main3-container-up">
                 <div class="divPrikazi">
-                    <h1>Galerija slika</h1>
-                    <button class="btnPrikaziSlike">Prikaži slike</button>
+                    <h1 class="galSlika">Galerija slika</h1>
                 </div>
+                
             </div>
             <div class="main3-container-down">
-
+                <div class="okoStrelica">
+                    <img class="strelice livaStrelica" id="lijevaStrelica" src="slike/right-arrow.svg" alt="Rikverc">
+                </div>
+                <div class="main3-container-slike">
+                    
+                        <div class="slider-prikaz-slika">
+                            <img name="sliderSlike" class="galerijaSlike" src="slike/_FB_IMG_1574523833599.png" alt="slika">
+                        </div>
+                        
+                </div>
+                <div class="okoStrelica">
+                    <img class="strelice" id="desnaStrelica" src="slike/right-arrow.svg" alt="Rikverc">
+                </div>
+            </div>
+            <div class="div-prm">
+                <button id="atmSlike" type="button" onclick="imageSlider()">Automatski slideshow</button>
             </div>
             
-
         </div>
 
     <!---------------------------------------------------------------->
         <!--KONTAKT-->
 
+    <form name="FORM">
         <div class="main4">
             <div class="kontakt-header1">
-                <h9>Kontakt</h1>
+                <h9>Kontakt</h9>
             </div>
             <div class="centrirat">
                 
@@ -144,11 +171,11 @@
                         <div class="ime-prezime-input">
                             <div class="obg">
                                 <h6>Ime</h3>
-                                <input class="kontakt-input-ime" placeholder="" type="text">
+                                <input class="kontakt-input-ime" id="inpIme" placeholder="" type="text" required>
                                 <h6>Prezime</h6>
-                                <input class="kontakt-input-prezime" placeholder="" type="text">
+                                <input class="kontakt-input-prezime" id="inpPrezime" placeholder="" type="text" required>
                                 <h6>Email</h6>
-                                <input class="kontakt-input-email" placeholder="" type="email">
+                                <input class="kontakt-input-email" id="inpEmail" placeholder="" type="email" required>
                             </div>
                         </div>
                     </div>
@@ -157,20 +184,29 @@
                         <div class="ime-prezime-input">
                             <div class="obg">
                                 <h6>Predmet poruke</h3>
-                                <input class="kontakt-input-ime" placeholder="" type="text">
+                                <input class="kontakt-input-predmet" id="inpPredmet" placeholder="" type="text" required>
                                 <h6>Poruka</h6>
-                                <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+                                <textarea id="w3review" name="w3review" id="textareaPoruka" rows="10" cols="50" required></textarea>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div style="padding-bottom: 60px;">
+                    <button id="posaljiBtn" onclick="CheckForm()" type="submit">Pošalji</button>
+                </div>
+
             </div>
             
 
         </div>
-
+    </form>
     <!---------------------------------------------------------------->
-
+<!--
+    <div style="width: 100%; height:auto; display:flex; justify-content:center;">
+        <div class="zatvoriSnack"><img src="slike/close.svg"></div>
+        <div id="snackbar">Unesi potrebne podatke</div>
+    </div> -->
 
     <script src="JavaS.js"></script>
 </body>

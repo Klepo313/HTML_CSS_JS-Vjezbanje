@@ -21,7 +21,7 @@ h7{
 /*NEBITNE STVARI*/
 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
   }
 
   ::-webkit-scrollbar-track {
@@ -118,11 +118,50 @@ h7{
     opacity: 1;
 }
 
+.fullscreenImage{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    
+}
+.ix{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--bijela);
+    padding: 0px 30px;
+    height: 40px;
+    width: auto;
+}
+.ix:hover{
+    background-color: var(--bijela);
+    cursor: pointer;
+    /*background-color: rgb(195, 134, 62, 0.7);*/
+    
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.ix:hover > .close{
+    color: #000;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
 
 /*******************************MAIN 3*********************************/
 
 .main3{
-    border: 1px solid red;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -130,18 +169,54 @@ h7{
     justify-content: center;
     align-items: center;
 }
-.main3-container-up{
-
-}
-.main3-container-down{
-
-}
 .divPrikazi{
     height: 20vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+}
+.slider-prikaz-slika{
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+}
+.main3-container-down{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.main3-container-slike{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+.strelice{
+    position: relative;
+    width: 44px;
+    height: 44px;
+    max-width: 44px;
+    max-height: 44px;
+    color: #fff;
+    fill: #fff;
+    z-index: 99;
+    opacity: 0.6;
+}
+.strelice:hover{
+    opacity: 1;
+    cursor: pointer;
+    padding: 2px;
+}
+.livaStrelica{
+    transform: rotate(180deg);
 }
 .btnPrikaziSlike{
     text-align: center;
@@ -166,8 +241,38 @@ h7{
     -ms-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+.galerijaSlike{
+    width: 90%;
+    height: auto;
 
+}
+#atmSlike{
+    text-align: center;
+    width: auto;
+    padding: 20px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 1);
+    color: var(--bijela);
+    font-size: 1em;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+#atmSlike:hover{
+    cursor: pointer;
+    background-color: var(--bijela);
+    color: var(--kontakt-input-kontakt);
 
+    -webkit-transition: all 0.4s ease;
+    -moz-transition:    all 0.4s ease;
+    -o-transition:      all 0.4s ease;
+    -ms-transition:     all 0.4s ease;
+    transition:         all 0.4s ease;
+}
+.okoStrelica{
+    height: 30%;
+    display: flex;
+    align-items: center;
+}
 .main4{
     width: 100%;
     height: 100vh;
@@ -179,9 +284,11 @@ h7{
 }
 .centrirat{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;height: 100%;
+    width: 100%;
+    height: 70%;
 }
 .main4-container-kontakt{
     position: relative;
@@ -192,9 +299,10 @@ h7{
     width: 70%;
 }
 .kontakt-header1{
+    width: 100%;
     text-align: center;
     margin-bottom: 0.1em;
-    margin-top: 3em;
+    margin-top: 0em;
 }
 
 .main4-container-center{
@@ -207,7 +315,7 @@ h7{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1.2em;
+    width: auto;
 }
 .obg{
     /*border: 1px solid red;*/
@@ -251,14 +359,17 @@ textarea{
     padding: 10px;
     max-width: 28em;
     min-width: 28em;
+    height: 100%;
     background-color: var(--kontakt-input-kontakt);
-    color: var(--zlatna);
+    color: var(--bijela);
     font-size: 17px;
-    font-weight: bold;
-    border: none;
+    font-weight: normal;
     letter-spacing: 200%;
 }
-input:hover{
+textarea:focus{
+    outline: none;
+}
+input:hover, textarea:hover{
     background-color: #242424;
 }
 input[type="text"], input[type="email"]{
@@ -280,17 +391,88 @@ input:focus::placeholder{
     left: 20px;
 }
 
+.kontakt-input-predmet, textarea{
+    border: 2px solid var(--narančasta);
+}
+
+#posaljiBtn{
+    background: var(--narančasta);
+    color: var(--bijela);
+    border: none;
+    font-size: 18px;
+    letter-spacing: 3px;
+    border-radius: 0px;
+    padding: 35px 140px;
+    text-align: center;
+    margin-top: 50px;
+}
+#posaljiBtn:hover{
+    cursor: pointer;
+    opacity: 0.85;
+    
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#snackbar{
+    margin: auto;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    min-width: 300px;
+    width: 800px;
+    max-height: 100px;
+    min-height: 100px;
+    background-color: #FF0000;
+
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    bottom: 100px;
+}
+
+.centrirat:last-child{
+    flex-direction: column;
+    justify-content: space-around;
+}
+.div-prm{
+    margin-bottom: 100px;
+    margin-top: 10px;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.fadeIn{
+    animation: fadeIn 1s;
+}
 
 /**************************************************************/
 /**************************************************************/
 
+@media screen and (max-width: 1453px){
+    .main4{
+        height: 100%;
+    }
+    
+}
 
 @media screen and (max-width: 1424px){
     .main2{
         position: relative;
-        margin-top: 300px;
-        flex-direction: column;
-        justify-content: center;
+        margin-top: 150px;
+        flex-direction: row;
+        justify-content: space-around;
         align-items: center;
     }
     .oMeni{
@@ -300,6 +482,37 @@ input:focus::placeholder{
         font-size: 16px;
         margin-bottom: 80px;
     }
+    .galSlika{
+        font-size: 60px;
+    }
+    #posaljiBtn{
+        padding: 25px 120px;
+        font-size: 17px;
+    }
+    .oMeni-slika{
+        width: 500px;
+    }
+    .main3-container-slike{
+        width: 80%;
+    }
+    
+}
+@media screen and (max-width: 1225px){
+    .main4-container-kontakt{
+        display: flex;
+        flex-direction: column;
+    }
+    .centrirat{
+        height: 100%;
+    }
+    input{
+        max-width: 28em;
+        height: 3.8125em;
+    }
+    .main2-container-right{
+        display: none;
+    }
+    
 }
 @media screen and (max-width: 732px){
     .oMeni{
@@ -312,11 +525,32 @@ input:focus::placeholder{
         margin-top: 20px;
         margin-bottom: 80px;
     }
+    
+    .strelice{
+        width: 24px;
+        height: 24px;
+    }
 }
 @media screen and (max-width: 600px){
     .oMeni{
         font-size: 40px;
     }
+    .galSlika{
+        font-size: 40px;
+    }
+    textarea{
+        min-width: 300px;
+    }
+    input, textarea{
+        width: 300px;
+    }
+    #posaljiBtn{
+        padding: 35px 60px;
+    }
+    
+}
+@media screen and (max-width: 420px){
+
 }
 @media screen and (max-width: 330px){
     .oMeni{
