@@ -173,13 +173,18 @@ arrLeft.addEventListener('click', function(){
 
 //FORMA - CHECK
 
-var inputIme = document.getElementById('inpIme');
-var inputPrezime = document.getElementById('inpPrezime');
-var inputIEmail = document.getElementById('inpEmail');
-var inputPredmetPoruke = document.getElementById('inpPredmet');
-var textareaPoruka = document.getElementById('textareaPoruka');
 
 function CheckForm() {
+  const input = dcument.querySelector('input');
+  
+  const inputIme = document.getElementById('inpIme');
+  const inputPrezime = document.getElementById('inpPrezime');
+  const inputEmail = document.getElementById('inpEmail');
+  const inputPredmetPoruke = document.getElementById('inpPredmet');
+  const textareaPoruka = document.getElementById('textareaPoruka');
+
+
+
   if(inputIme == "")
     inputIme.style.border = "2px solid red";
 
